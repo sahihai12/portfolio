@@ -1482,3 +1482,9 @@ section,
 .o-6{
   opacity: 0.6;
 }
+
+@media(max-width: 881px){
+  .hide-mobile{
+    display: none;
+  }
+}
