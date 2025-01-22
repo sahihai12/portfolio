@@ -153,3 +153,20 @@
 
   window.addEventListener("load", initSwiper);
 })();
+
+
+// change color func
+const listColor = document.querySelectorAll('.change-color-list li')
+listColor.forEach(el => {
+  el.style.background = `#${el.dataset.color}`;
+
+  el.addEventListener('click' , () => {
+    const activeColor =  document.querySelector('.change-color-list li.active')
+    activeColor.classList.remove('active')
+    el.classList.add('active')
+    document.documentElement.style.setProperty('--accent-color', `#${el.dataset.color}`);
+
+    console.log('reaching color' ,'--accent-color', `#${el.dataset.color}` )
+  })
+
+})
